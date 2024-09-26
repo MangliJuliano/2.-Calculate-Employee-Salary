@@ -8,12 +8,15 @@ salary %= 50
 twenty_count = salary // 20
 salary %= 20
 
-# Calculate the remaining amount to be paid with 1s and 2s
-one_count = salary // 1
-two_count = (salary % 1) // 2
+# Calculate the number of 2 euro coins needed
+two_count = salary // 2
+salary %= 2
+
+# Calculate the number of 1 euro coins needed
+one_count = salary
 
 print("You need:")
 print(f"{fifty_count} x 50 euro notes")
 print(f"{twenty_count} x 20 euro notes")
-print(f"{one_count} x 1 euro coins")
 print(f"{two_count} x 2 euro coins")
+print(f"{one_count} x 1 euro coins")
